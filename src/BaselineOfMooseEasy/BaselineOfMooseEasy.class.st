@@ -15,7 +15,7 @@ BaselineOfMooseEasy >> baseline: spec [
 			"Packages"
 			spec
 				package: 'Moose-Easy';
-				package: 'Mooose-Easy-Tests'
+				package: 'Moose-Easy-Tests'
 					with: [ spec requires: #('Moose-Easy') ] ]
 ]
 
