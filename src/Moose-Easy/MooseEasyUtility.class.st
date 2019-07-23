@@ -23,6 +23,7 @@ MooseEasyUtility class >> createJavaMSEOn: revPath using: pathToJavaToFamixComma
 
 	| command result working javaToFamixOutput javaToFamixErrors verveineJOptions |
 	working := FileSystem disk workingDirectory.
+	(working / 'tmp') ensureCreateDirectory.
 	javaToFamixOutput := working / 'tmp' / 'output_java_to_famix'.
 	javaToFamixErrors := working / 'tmp' / 'errors_java_to_famix'.
 	verveineJOptions := '-Xms1g -Xmx15g -- -o "' , mseFileName
