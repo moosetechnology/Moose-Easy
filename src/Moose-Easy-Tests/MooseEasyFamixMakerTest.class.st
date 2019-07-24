@@ -13,8 +13,8 @@ Class {
 { #category : #test }
 MooseEasyFamixMakerTest >> javaSourcePathForTesting [
 	| path |
-	path := '/mnt/c/Users/fuhrm/Documents/GitHub/FactoryVariants' asFileReference.
-	"path := 'C:/Users/fuhrm/Documents/GitHub/FactoryVariants' asFileReference."
+	path := self resourcesFileReference / 'sampleJavaProject'
+		/ 'FactoryVariants'.
 	path exists
 		ifFalse: [ self
 				error:
@@ -25,13 +25,24 @@ MooseEasyFamixMakerTest >> javaSourcePathForTesting [
 { #category : #test }
 MooseEasyFamixMakerTest >> mseDestinationPathForTesting [
 	| path |
-	path := '/home/cfuhrman/FactoryVariants.mse' asFileReference.
-	"path := 'c:/users/fuhrm/Desktop/FactoryVariants.mse' asFileReference."
+	path := 'FactoryVariants.mse' asFileReference.
 	path parent exists
 		ifFalse: [ self
 				error:
 					'The testing path to the MSE output directory is invalid and needs proper defining. It must be valid in a Bourne Shell. See https://fuhrmanator.github.io/2019/03/16/LibC-Pharo-experiments.html' ].
 	^ path
+]
+
+{ #category : #tests }
+MooseEasyFamixMakerTest >> resourcesFileReference [
+	| repo |
+	repo := (IceRepository registry
+		detect: [ :each | each includesPackageNamed: 'Moose-Easy-Tests' ]
+		ifNone: [ self
+				error:
+					'Please add a clone of this project to Iceberg to access to the resources' ])
+		location.
+	^ repo / 'resources'
 ]
 
 { #category : #running }
@@ -81,8 +92,7 @@ MooseEasyFamixMakerTest >> testVerveineJScriptPath [
 { #category : #test }
 MooseEasyFamixMakerTest >> verveineJScriptPathForTesting [
 	| path |
-	path := '/mnt/c/Users/fuhrm/Documents/git_repos/VerveineJ/verveinej.sh' asFileReference.
-"	path := 'c:/Users/fuhrm/Documents/git_repos/VerveineJ/verveinej_bourne_shell.sh' asFileReference."
+	path := self resourcesFileReference / 'VerveineJ' / 'verveinej.sh'.
 	path exists
 		ifFalse: [ self
 				error:
