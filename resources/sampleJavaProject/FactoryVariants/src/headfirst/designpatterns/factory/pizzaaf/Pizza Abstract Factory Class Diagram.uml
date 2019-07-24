@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="796.0" y="710.0">headfirst.designpatterns.factory.pizzaaf.FrozenClams</node>
+    <node x="477.0" y="710.0">headfirst.designpatterns.factory.pizzaaf.ChicagoPizzaStore</node>
+    <node x="226.5" y="165.0">headfirst.designpatterns.factory.pizzaaf.Pizza</node>
+    <node x="231.0" y="555.0">headfirst.designpatterns.factory.pizzaaf.NYPizzaIngredientFactory</node>
+    <node x="593.0" y="90.0">headfirst.designpatterns.factory.pizzaaf.Spinach</node>
+    <node x="255.0" y="90.0">headfirst.designpatterns.factory.pizzaaf.Garlic</node>
+    <node x="747.25" y="630.0">headfirst.designpatterns.factory.pizzaaf.Clams</node>
+    <node x="353.0" y="90.0">headfirst.designpatterns.factory.pizzaaf.RedPepper</node>
+    <node x="132.0" y="245.0">headfirst.designpatterns.factory.pizzaaf.PepperoniPizza</node>
+    <node x="667.0" y="710.0">headfirst.designpatterns.factory.pizzaaf.FreshClams</node>
+    <node x="564.25" y="475.0">headfirst.designpatterns.factory.pizzaaf.Dough</node>
+    <node x="361.0" y="0.0">headfirst.designpatterns.factory.pizzaaf.Veggies</node>
+    <node x="340.0" y="710.0">headfirst.designpatterns.factory.pizzaaf.NYPizzaStore</node>
+    <node x="320.0" y="400.0">headfirst.designpatterns.factory.pizzaaf.ReggianoCheese</node>
+    <node x="402.0" y="245.0">headfirst.designpatterns.factory.pizzaaf.VeggiePizza</node>
+    <node x="703.0" y="90.0">headfirst.designpatterns.factory.pizzaaf.Onion</node>
+    <node x="615.0" y="555.0">headfirst.designpatterns.factory.pizzaaf.ThickCrustDough</node>
+    <node x="0.0" y="555.0">headfirst.designpatterns.factory.pizzaaf.ChicagoPizzaIngredientFactory</node>
+    <node x="127.0" y="90.0">headfirst.designpatterns.factory.pizzaaf.BlackOlives</node>
+    <node x="162.0" y="400.0">headfirst.designpatterns.factory.pizzaaf.ParmesanCheese</node>
+    <node x="0.0" y="865.0">headfirst.designpatterns.factory.pizzaaf.SlicedPepperoni</node>
+    <node x="146.0" y="710.0">headfirst.designpatterns.factory.pizzaaf.PlumTomatoSauce</node>
+    <node x="0.0" y="400.0">headfirst.designpatterns.factory.pizzaaf.MozzarellaCheese</node>
+    <node x="478.0" y="90.0">headfirst.designpatterns.factory.pizzaaf.Eggplant</node>
+    <node x="459.0" y="555.0">headfirst.designpatterns.factory.pizzaaf.ThinCrustDough</node>
+    <node x="102.25" y="630.0">headfirst.designpatterns.factory.pizzaaf.Sauce</node>
+    <node x="280.0" y="245.0">headfirst.designpatterns.factory.pizzaaf.ClamPizza</node>
+    <node x="178.0" y="785.0">headfirst.designpatterns.factory.pizzaaf.PizzaTestDrive</node>
+    <node x="0.0" y="90.0">headfirst.designpatterns.factory.pizzaaf.Mushroom</node>
+    <node x="0.0" y="710.0">headfirst.designpatterns.factory.pizzaaf.MarinaraSauce</node>
+    <node x="423.5" y="630.0">headfirst.designpatterns.factory.pizzaaf.PizzaStore</node>
+    <node x="130.5" y="475.0">headfirst.designpatterns.factory.pizzaaf.PizzaIngredientFactory</node>
+    <node x="188.0" y="320.0">headfirst.designpatterns.factory.pizzaaf.Cheese</node>
+    <node x="0.0" y="245.0">headfirst.designpatterns.factory.pizzaaf.CheesePizza</node>
+    <node x="15.5" y="785.0">headfirst.designpatterns.factory.pizzaaf.Pepperoni</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.Onion" target="headfirst.designpatterns.factory.pizzaaf.Veggies">
+      <point x="0.0" y="-15.0" />
+      <point x="743.5" y="50.0" />
+      <point x="443.6428571428571" y="50.0" />
+      <point x="38.14285714285714" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.FreshClams" target="headfirst.designpatterns.factory.pizzaaf.Clams">
+      <point x="0.0" y="-15.0" />
+      <point x="721.5" y="685.0" />
+      <point x="767.5" y="685.0" />
+      <point x="-20.25" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.Spinach" target="headfirst.designpatterns.factory.pizzaaf.Veggies">
+      <point x="0.0" y="-15.0" />
+      <point x="638.0" y="60.0" />
+      <point x="430.92857142857144" y="60.0" />
+      <point x="25.42857142857143" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.ParmesanCheese" target="headfirst.designpatterns.factory.pizzaaf.Cheese">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.Eggplant" target="headfirst.designpatterns.factory.pizzaaf.Veggies">
+      <point x="0.0" y="-15.0" />
+      <point x="525.5" y="70.0" />
+      <point x="418.2142857142857" y="70.0" />
+      <point x="12.714285714285722" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.NYPizzaStore" target="headfirst.designpatterns.factory.pizzaaf.PizzaStore">
+      <point x="0.0" y="-15.0" />
+      <point x="398.5" y="685.0" />
+      <point x="448.75" y="685.0" />
+      <point x="-25.25" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.MozzarellaCheese" target="headfirst.designpatterns.factory.pizzaaf.Cheese">
+      <point x="0.0" y="-15.0" />
+      <point x="71.0" y="375.0" />
+      <point x="202.33333333333334" y="375.0" />
+      <point x="-28.666666666666668" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.FrozenClams" target="headfirst.designpatterns.factory.pizzaaf.Clams">
+      <point x="0.0" y="-15.0" />
+      <point x="854.0" y="685.0" />
+      <point x="808.0" y="685.0" />
+      <point x="20.25" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.SlicedPepperoni" target="headfirst.designpatterns.factory.pizzaaf.Pepperoni">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.PepperoniPizza" target="headfirst.designpatterns.factory.pizzaaf.Pizza">
+      <point x="0.0" y="-15.0" />
+      <point x="196.0" y="225.0" />
+      <point x="254.25" y="225.0" />
+      <point x="-9.25" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.VeggiePizza" target="headfirst.designpatterns.factory.pizzaaf.Pizza">
+      <point x="0.0" y="-15.0" />
+      <point x="457.0" y="215.0" />
+      <point x="291.25" y="215.0" />
+      <point x="27.75" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.ReggianoCheese" target="headfirst.designpatterns.factory.pizzaaf.Cheese">
+      <point x="0.0" y="-15.0" />
+      <point x="388.0" y="375.0" />
+      <point x="259.6666666666667" y="375.0" />
+      <point x="28.66666666666667" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.CheesePizza" target="headfirst.designpatterns.factory.pizzaaf.Pizza">
+      <point x="0.0" y="-15.0" />
+      <point x="56.0" y="215.0" />
+      <point x="235.75" y="215.0" />
+      <point x="-27.75" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.BlackOlives" target="headfirst.designpatterns.factory.pizzaaf.Veggies">
+      <point x="0.0" y="-15.0" />
+      <point x="181.0" y="60.0" />
+      <point x="380.07142857142856" y="60.0" />
+      <point x="-25.428571428571423" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.RedPepper" target="headfirst.designpatterns.factory.pizzaaf.Veggies">
+      <point x="0.0" y="-15.0" />
+      <point x="7.105427357601002E-15" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.ThinCrustDough" target="headfirst.designpatterns.factory.pizzaaf.Dough">
+      <point x="0.0" y="-15.0" />
+      <point x="527.0" y="530.0" />
+      <point x="585.25" y="530.0" />
+      <point x="-21.0" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.PlumTomatoSauce" target="headfirst.designpatterns.factory.pizzaaf.Sauce">
+      <point x="0.0" y="-15.0" />
+      <point x="220.5" y="685.0" />
+      <point x="161.5" y="685.0" />
+      <point x="19.75" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.NYPizzaIngredientFactory" target="headfirst.designpatterns.factory.pizzaaf.PizzaIngredientFactory">
+      <point x="0.0" y="-15.0" />
+      <point x="322.5" y="530.0" />
+      <point x="255.75" y="530.0" />
+      <point x="41.75" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.MarinaraSauce" target="headfirst.designpatterns.factory.pizzaaf.Sauce">
+      <point x="0.0" y="-15.0" />
+      <point x="63.0" y="685.0" />
+      <point x="122.0" y="685.0" />
+      <point x="-19.75" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.Garlic" target="headfirst.designpatterns.factory.pizzaaf.Veggies">
+      <point x="0.0" y="-15.0" />
+      <point x="294.0" y="70.0" />
+      <point x="392.7857142857143" y="70.0" />
+      <point x="-12.714285714285708" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.Mushroom" target="headfirst.designpatterns.factory.pizzaaf.Veggies">
+      <point x="0.0" y="-15.0" />
+      <point x="53.5" y="50.0" />
+      <point x="367.3571428571429" y="50.0" />
+      <point x="-38.14285714285714" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.ThickCrustDough" target="headfirst.designpatterns.factory.pizzaaf.Dough">
+      <point x="0.0" y="-15.0" />
+      <point x="685.5" y="530.0" />
+      <point x="627.25" y="530.0" />
+      <point x="21.0" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.ChicagoPizzaIngredientFactory" target="headfirst.designpatterns.factory.pizzaaf.PizzaIngredientFactory">
+      <point x="0.0" y="-15.0" />
+      <point x="105.5" y="530.0" />
+      <point x="172.25" y="530.0" />
+      <point x="-41.75" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.ClamPizza" target="headfirst.designpatterns.factory.pizzaaf.Pizza">
+      <point x="0.0" y="-15.0" />
+      <point x="331.0" y="225.0" />
+      <point x="272.75" y="225.0" />
+      <point x="9.25" y="15.0" />
+    </edge>
+    <edge source="headfirst.designpatterns.factory.pizzaaf.ChicagoPizzaStore" target="headfirst.designpatterns.factory.pizzaaf.PizzaStore">
+      <point x="0.0" y="-15.0" />
+      <point x="549.5" y="685.0" />
+      <point x="499.25" y="685.0" />
+      <point x="25.25" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="781.5" y="357.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
