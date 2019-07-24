@@ -42,8 +42,6 @@ MooseEasyFamixMaker >> mseDestinationPath: anObject [
 
 { #category : #acccessing }
 MooseEasyFamixMaker >> verveineJScriptPath [
-	verveineJScriptPath isNil
-		ifTrue: [ verveineJScriptPath := GMUtility queryJavaToFamixCommand ].
 	^ verveineJScriptPath
 ]
 
