@@ -1,4 +1,7 @@
 # Moose-Easy
+
+Master: [![Build Pass](https://travis-ci.org/moosetechnology/Moose-Easy.svg?branch=master)](https://travis-ci.org/moosetechnology/Moose-Easy)
+
 Tools to facilitate access to Moose, e.g., generating MSE files from source code.
 
 # Famix Maker 
