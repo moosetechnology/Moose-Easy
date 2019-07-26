@@ -14,6 +14,15 @@ Class {
 	#category : #'Moose-Easy'
 }
 
+{ #category : #'instance creation' }
+MooseEasyFamixMaker class >> generateMSETo: aFileReference parsing: aJavaProjectDirectory with: aVerveineJScript [
+	^ self new
+		verveineJScriptPath: aVerveineJScript;
+		javaSourcePath: aJavaProjectDirectory;
+		mseDestinationPath: aFileReference;
+		yourself
+]
+
 { #category : #'as yet unclassified' }
 MooseEasyFamixMaker >> generateMSE [
 	"Launch the parser"

@@ -54,10 +54,10 @@ MooseEasyFamixMakerTest >> setUp [
 
 { #category : #test }
 MooseEasyFamixMakerTest >> testGenerateMSE [
-	wizard
-		verveineJScriptPath: self verveineJScriptPathForTesting;
-		javaSourcePath: self javaSourcePathForTesting;
-		mseDestinationPath: self mseDestinationPathForTesting.
+	wizard := MooseEasyFamixMaker
+		generateMSETo: self mseDestinationPathForTesting
+		parsing: self javaSourcePathForTesting
+		with: self verveineJScriptPathForTesting.
 	self mseDestinationPathForTesting ensureDelete.
 	wizard generateMSE.
 	self assert: wizard mseDestinationPath asFileReference exists
