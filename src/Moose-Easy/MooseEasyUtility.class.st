@@ -7,7 +7,7 @@ Class {
 	#category : #'Moose-Easy'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #utility }
 MooseEasyUtility class >> abortWithErrorMessageFromFileReference: fileRef title: title [
 	"Show abort dialog and the message from the error output file"
 
@@ -17,7 +17,35 @@ MooseEasyUtility class >> abortWithErrorMessageFromFileReference: fileRef title:
 	AssertionFailure signal: title , ': ' , displayText.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #utility }
+MooseEasyUtility class >> cloneGitHubRepo: url [
+	"clone a repo of a project (if it doesn't already exist) and return its location "
+
+	| projectName location reposDir |
+	reposDir := FileSystem disk workingDirectory / 'tmp'
+		/ 'MooseEasyRepos'.
+	reposDir ensureCreateDirectory.
+	projectName := self extractProjectNameFromGitHubURL: url.
+	location := reposDir / projectName.
+	location exists
+		ifFalse: [ | cloneCommand working gitErrors result |
+			working := FileSystem disk workingDirectory.
+			gitErrors := working / 'tmp' / 'errors_gitClone'.
+			"Command to extract the revision from git into a temp dir so we can generate an MSE file for it"
+			cloneCommand := 'cd "' , reposDir fullName , '" && git clone '
+				, url , ' ' , projectName , ' 2>"' , gitErrors fullName , '"'.
+			"'LibC: About to run command: ' crLog.
+			(' > ', cloneCommand) crLog."
+			result := LibC runCommand: cloneCommand.
+			result = 0
+				ifFalse: [ self
+						abortWithErrorMessageFromFileReference: gitErrors asFileReference
+						title: 'Failed to execute: ' , cloneCommand ] ].
+	self assert: location exists.
+	^ location
+]
+
+{ #category : #utility }
 MooseEasyUtility class >> createJavaMSEOn: revPath using: pathToJavaToFamixCommand named: mseFileName [
 	"create an MSE file from the source code in revPath using VerveineJ parser"
 
@@ -38,4 +66,18 @@ MooseEasyUtility class >> createJavaMSEOn: revPath using: pathToJavaToFamixComma
 				abortWithErrorMessageFromFileReference: javaToFamixErrors
 				title: 'The command ''' , command , ''' terminated with errors' ].
 	^ result
+]
+
+{ #category : #utility }
+MooseEasyUtility class >> extractProjectNameFromGitHubURL: url [
+	"Get project name from URL, accounting for cases where it ends in .git"
+	| splitted githubUserName projectName |
+	splitted := url splitOn: '/'.
+	githubUserName := splitted fourth.
+	projectName := splitted fifth.
+	(projectName endsWith: '.git')
+		ifTrue: [ projectName := projectName allButLast: '.git' size ].
+	"Make sure name is unique by putting username before it with '__' as separator" 
+	" underscore is not a valid character in GitHub usernames according to https://www.npmjs.com/package/github-username-regex"
+	^  githubUserName , '__' , projectName  
 ]
