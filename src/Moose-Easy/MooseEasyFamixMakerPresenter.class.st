@@ -276,9 +276,10 @@ MooseEasyFamixMakerPresenter >> title [
 
 { #category : #'as yet unclassified' }
 MooseEasyFamixMakerPresenter >> verifyPaths [
-	| green red newFeedbackMsgText |
-	green := Color red: 240 green: 255 blue: 240.
-	red := Color red: 255 green: 240 blue: 240.
+	| green red normalColor newFeedbackMsgText |
+	normalColor := Smalltalk ui theme backgroundColor.
+	green := normalColor mixed: 0.8 with: Color green.
+	red := normalColor mixed: 0.8 with: Color red.
 	generateMSEButton enabled: self manageButton.
 	newFeedbackMsgText := ''.
 	javaSourcePresenter input
@@ -298,6 +299,6 @@ MooseEasyFamixMakerPresenter >> verifyPaths [
 				& destinationPresenter input text isNotEmpty
 				ifTrue: [ green ]
 				ifFalse: [ newFeedbackMsgText := newFeedbackMsgText , 'Destination path is invalid. '. red ]).
-	feedbackMessage text: newFeedbackMsgText; color: (newFeedbackMsgText isEmpty ifTrue:[ Color white ] ifFalse:[ red]).
+	feedbackMessage text: newFeedbackMsgText; color: (newFeedbackMsgText isEmpty ifTrue:[ normalColor ] ifFalse:[ red]).
 
 ]
