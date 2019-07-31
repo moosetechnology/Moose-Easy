@@ -75,6 +75,7 @@ MooseEasyFamixMakerPresenter class >> defaultSpec [
 { #category : #examples }
 MooseEasyFamixMakerPresenter class >> open [
 	<example>
+	<mooseTool: #'Famix Maker'>
 	^ self new openWithSpec
 ]
 
