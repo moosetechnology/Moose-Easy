@@ -10,7 +10,7 @@ Class {
 	#category : #'Moose-Easy-Tests'
 }
 
-{ #category : #test }
+{ #category : #utilities }
 MooseEasyFamixMakerTest >> javaSourcePathForTesting [
 	| path |
 	path := self resourcesFileReference / 'sampleJavaProject'
@@ -22,7 +22,7 @@ MooseEasyFamixMakerTest >> javaSourcePathForTesting [
 	^ path
 ]
 
-{ #category : #test }
+{ #category : #utilities }
 MooseEasyFamixMakerTest >> mseDestinationPathForTesting [
 	| path |
 	path := 'FactoryVariants.mse' asFileReference.
@@ -33,7 +33,7 @@ MooseEasyFamixMakerTest >> mseDestinationPathForTesting [
 	^ path
 ]
 
-{ #category : #tests }
+{ #category : #running }
 MooseEasyFamixMakerTest >> resourcesFileReference [
 	| repo |
 	repo := (IceRepository registry
@@ -52,7 +52,7 @@ MooseEasyFamixMakerTest >> setUp [
 	wizard := MooseEasyFamixMaker new.
 ]
 
-{ #category : #test }
+{ #category : #tests }
 MooseEasyFamixMakerTest >> testGenerateMSE [
 	wizard := MooseEasyFamixMaker
 		generateMSETo: self mseDestinationPathForTesting
@@ -63,7 +63,7 @@ MooseEasyFamixMakerTest >> testGenerateMSE [
 	self assert: wizard mseDestinationPath asFileReference exists
 ]
 
-{ #category : #test }
+{ #category : #tests }
 MooseEasyFamixMakerTest >> testJavaSourcePath [
 	| path |
 	path := self javaSourcePathForTesting asFileReference .
@@ -71,7 +71,7 @@ MooseEasyFamixMakerTest >> testJavaSourcePath [
 	self assert: wizard javaSourcePath equals: path
 ]
 
-{ #category : #test }
+{ #category : #tests }
 MooseEasyFamixMakerTest >> testMseDestinationPath [
 	| path |
 	path := self mseDestinationPathForTesting asFileReference .
@@ -89,7 +89,7 @@ MooseEasyFamixMakerTest >> testVerveineJScriptPath [
 	self assert: expectedPath equals: path.
 ]
 
-{ #category : #test }
+{ #category : #utilities }
 MooseEasyFamixMakerTest >> verveineJScriptPathForTesting [
 	| path |
 	path := self resourcesFileReference / 'VerveineJ' / 'verveinej.sh'.
