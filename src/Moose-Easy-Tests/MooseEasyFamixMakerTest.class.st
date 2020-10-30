@@ -92,7 +92,10 @@ MooseEasyFamixMakerTest >> testVerveineJScriptPath [
 { #category : #utilities }
 MooseEasyFamixMakerTest >> verveineJScriptPathForTesting [
 	| path |
-	path := self resourcesFileReference / 'VerveineJ' / 'verveinej.sh'.
+	Smalltalk os current isWindows
+		ifTrue:
+			[ path := self resourcesFileReference / 'VerveineJ' / 'verveinej.bat' ]
+		ifFalse: [ path := self resourcesFileReference / 'VerveineJ' / 'verveinej.sh' ].
 	path exists
 		ifFalse: [ self
 				error:

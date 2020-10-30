@@ -54,7 +54,7 @@ MooseEasyUtility class >> createJavaMSEOn: revPath using: pathToJavaToFamixComma
 	(working / 'tmp') ensureCreateDirectory.
 	javaToFamixOutput := working / 'tmp' / 'output_java_to_famix'.
 	javaToFamixErrors := working / 'tmp' / 'errors_java_to_famix'.
-	verveineJOptions := '-Xms1g -Xmx15g -- -o "' , mseFileName
+	verveineJOptions := '-o "' , mseFileName
 		, '" -anchor assoc -alllocals .'.	"-localaccesses -autocp "
 	command := 'cd "' , revPath asFileReference pathString , '" && "'
 		, pathToJavaToFamixCommand , '" ' , verveineJOptions , ' > "'
