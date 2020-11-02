@@ -10,6 +10,12 @@ Class {
 	#category : #'Moose-Easy-Tests'
 }
 
+{ #category : #accessing }
+MooseEasyFamixMakerTest class >> defaultTimeLimit [
+
+	^ 1 minute
+]
+
 { #category : #utilities }
 MooseEasyFamixMakerTest >> javaSourcePathForTesting [
 	| path |
