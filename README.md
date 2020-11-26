@@ -4,6 +4,14 @@ Master: [![Build Pass](https://travis-ci.org/moosetechnology/Moose-Easy.svg?bran
 
 Tools to facilitate access to Moose, e.g., generating MSE files from source code.
 
+If Moose-Easy is not loaded in your image, you can do so with:
+```Smalltalk
+Metacello new
+  baseline: 'MooseEasy';
+  repository: 'github://moosetechnology/Moose-Easy';
+  load.
+```
+
 # Famix Maker
 
 Create MSE files easily, provided you have installed [VerveineJ](https://github.com/moosetechnology/VerveineJ).
