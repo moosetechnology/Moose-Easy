@@ -159,7 +159,7 @@ MooseEasyFamixMakerPresenter >> initializePresenter [
 MooseEasyFamixMakerPresenter >> initializeWidgets [
 	javaSourcePresenter := self
 		instantiate:
-			(SpLabelledPresenter
+			(SpLabeledPresenter
 				label: 'Java source path: '
 				input:
 					(self newTextInput
@@ -169,7 +169,7 @@ MooseEasyFamixMakerPresenter >> initializeWidgets [
 		icon: (self iconNamed: 'glamorousOpen').
 	parserPresenter := self
 		instantiate:
-			(SpLabelledPresenter
+			(SpLabeledPresenter
 				label: 'Parser path: '
 				input:
 					(self newTextInput
@@ -182,7 +182,7 @@ MooseEasyFamixMakerPresenter >> initializeWidgets [
 		icon: (self iconNamed: 'glamorousOpen').
 	destinationPresenter := self
 		instantiate:
-			(SpLabelledPresenter
+			(SpLabeledPresenter
 				label: 'Destination path: '
 				input: (self newTextInput autoAccept: true;
 						placeholder: 'The path where the MSE file will be created')).
@@ -190,7 +190,7 @@ MooseEasyFamixMakerPresenter >> initializeWidgets [
 		icon: (self iconNamed: 'glamorousOpen').
 	fileName := self
 		instantiate:
-			(SpLabelledPresenter
+			(SpLabeledPresenter
 				label: 'File name: '
 				input: (self newTextInput autoAccept: true;
 						placeholder: 'The name of the MSE file (without the .mse extension)')).
