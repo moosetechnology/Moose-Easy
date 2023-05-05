@@ -49,12 +49,12 @@ MooseEasyFamixMaker >> mseDestinationPath: anObject [
 	mseDestinationPath := anObject
 ]
 
-{ #category : #acccessing }
+{ #category : #accessing }
 MooseEasyFamixMaker >> verveineJScriptPath [
 	^ verveineJScriptPath
 ]
 
-{ #category : #acccessing }
+{ #category : #accessing }
 MooseEasyFamixMaker >> verveineJScriptPath: pathString [
 	verveineJScriptPath := pathString.
 ]
