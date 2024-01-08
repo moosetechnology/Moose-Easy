@@ -22,61 +22,45 @@ Class {
 	#category : #'Moose-Easy'
 }
 
-{ #category : #specs }
-MooseEasyFamixMakerPresenter class >> defaultSpec [
+{ #category : #layout }
+MooseEasyFamixMakerPresenter class >> defaultLayout [
+
 	^ SpBoxLayout newVertical
-		add: '' withConstraints: [ :constraints | constraints height: 10 ];
-		add:
-			(SpBoxLayout newHorizontal
-				add: #javaSourcePresenter;
-				add:
-					(SpBoxLayout newVertical
-						add: #selectSourceButton
-						withConstraints: [ :constraints | constraints height: 25 ])
-					withConstraints: [ :constraints | constraints width: 25 ])
-			withConstraints: [ :constraints | constraints height: 40 ];
-		add:
-			(SpBoxLayout newHorizontal
-				add: #parserPresenter;
-				add:
-					(SpBoxLayout newVertical
-						add: #selectParserButton
-						withConstraints: [ :constraints | constraints height: 25 ])
-					withConstraints: [ :constraints | constraints width: 25 ])
-			withConstraints: [ :constraints | constraints height: 40 ];
-		add:
-			(SpBoxLayout newHorizontal
-				add: #destinationPresenter;
-				add:
-					(SpBoxLayout newVertical
-						add: #selectDestinationButton
-						withConstraints: [ :constraints | constraints height: 25 ])
-					withConstraints: [ :constraints | constraints width: 25 ])
-			withConstraints: [ :constraints | constraints height: 40 ];
-		add:
-			(SpBoxLayout newHorizontal
-				add: #fileName;
-				add:
-					(SpBoxLayout newVertical
-						add: '.mse'
-						withConstraints: [ :constraints | constraints height: 25 ])
-					withConstraints: [ :constraints | constraints width: 30 ])
-			withConstraints: [ :constraints | constraints height: 40 ];
-				add: #generateMSEButton
-				withConstraints: [ :constraints | 
-					constraints
-						height: 40; width: 150 ];
-		add: #indeterminated withConstraints: [ :constraints | constraints height: 10 ];
-		add: #feedbackMessage
-			withConstraints: [ :constraints | constraints height: 170 ];
-		yourself
+		  add: '' withConstraints: [ :constraints | constraints height: 10 ];
+		  add: (SpBoxLayout newHorizontal
+				   add: #javaSourcePresenter;
+				   add: (SpBoxLayout newVertical add: #selectSourceButton withConstraints: [ :constraints | constraints height: 25 ])
+				   withConstraints: [ :constraints | constraints width: 25 ])
+		  withConstraints: [ :constraints | constraints height: 40 ];
+		  add: (SpBoxLayout newHorizontal
+				   add: #parserPresenter;
+				   add: (SpBoxLayout newVertical add: #selectParserButton withConstraints: [ :constraints | constraints height: 25 ])
+				   withConstraints: [ :constraints | constraints width: 25 ])
+		  withConstraints: [ :constraints | constraints height: 40 ];
+		  add: (SpBoxLayout newHorizontal
+				   add: #destinationPresenter;
+				   add: (SpBoxLayout newVertical add: #selectDestinationButton withConstraints: [ :constraints | constraints height: 25 ])
+				   withConstraints: [ :constraints | constraints width: 25 ])
+		  withConstraints: [ :constraints | constraints height: 40 ];
+		  add: (SpBoxLayout newHorizontal
+				   add: #fileName;
+				   add: (SpBoxLayout newVertical add: '.mse' withConstraints: [ :constraints | constraints height: 25 ])
+				   withConstraints: [ :constraints | constraints width: 30 ])
+		  withConstraints: [ :constraints | constraints height: 40 ];
+		  add: #generateMSEButton withConstraints: [ :constraints |
+		  constraints
+			  height: 40;
+			  width: 150 ];
+		  add: #indeterminated withConstraints: [ :constraints | constraints height: 10 ];
+		  add: #feedbackMessage withConstraints: [ :constraints | constraints height: 170 ];
+		  yourself
 ]
 
 { #category : #examples }
 MooseEasyFamixMakerPresenter class >> open [
 	<example>
 	<mooseTool: #'Famix Maker'>
-	^ self new openWithSpec
+	^ self new open
 ]
 
 { #category : #action }
